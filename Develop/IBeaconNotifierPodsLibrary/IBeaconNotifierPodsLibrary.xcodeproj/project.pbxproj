@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		097E698918F7D85B00AB403B /* IBNBeaconRepositoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 097E698818F7D85B00AB403B /* IBNBeaconRepositoryTest.m */; };
+		097E698E18F7E9C100AB403B /* beacon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 097E698D18F7E9C100AB403B /* beacon.csv */; };
+		099AAD2E18F6931E00940E78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099AAD2D18F6931E00940E78 /* Foundation.framework */; };
+		099AAD3C18F6931E00940E78 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099AAD3B18F6931E00940E78 /* XCTest.framework */; };
+		099AAD3D18F6931E00940E78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099AAD2D18F6931E00940E78 /* Foundation.framework */; };
+		099AAD3F18F6931E00940E78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099AAD3E18F6931E00940E78 /* UIKit.framework */; };
+		099AAD4218F6931E00940E78 /* libIBeaconNotifierPodsLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 099AAD2A18F6931E00940E78 /* libIBeaconNotifierPodsLibrary.a */; };
+		099AAD4818F6931E00940E78 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 099AAD4618F6931E00940E78 /* InfoPlist.strings */; };
+		099AAD7018F6938800940E78 /* statemap.m in Sources */ = {isa = PBXBuildFile; fileRef = 099AAD5D18F6938800940E78 /* statemap.m */; };
+		099AAD7118F6938800940E78 /* IBNBeaconRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 099AAD6118F6938800940E78 /* IBNBeaconRepository.m */; };
+		099AAD7218F6938800940E78 /* IBNBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 099AAD6418F6938800940E78 /* IBNBeacon.m */; };
+		099AAD7318F6938800940E78 /* IBNBeaconModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 099AAD6618F6938800940E78 /* IBNBeaconModel.m */; };
+		099AAD7418F6938800940E78 /* IBNBLEEventService.m in Sources */ = {isa = PBXBuildFile; fileRef = 099AAD6A18F6938800940E78 /* IBNBLEEventService.m */; };
+		099AAD7518F6938800940E78 /* IBNNearestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 099AAD6C18F6938800940E78 /* IBNNearestModel.m */; };
+		099AAD7A18F6A21700940E78 /* IBNBeaconFSM.m in Sources */ = {isa = PBXBuildFile; fileRef = 099AAD7818F6A21700940E78 /* IBNBeaconFSM.m */; };
+		099AAD7F18F6A35700940E78 /* IBNCSVPerserUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 099AAD7D18F6A35100940E78 /* IBNCSVPerserUtility.m */; };
+		BEADB6952D3C4854A1FF4A73 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0694419877C4D0E8934BF85 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		099AAD4018F6931E00940E78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 099AAD2218F6931E00940E78 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 099AAD2918F6931E00940E78;
+			remoteInfo = IBeaconNotifierPodsLibrary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		099AAD2818F6931E00940E78 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		097E698818F7D85B00AB403B /* IBNBeaconRepositoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBNBeaconRepositoryTest.m; sourceTree = "<group>"; };
+		097E698B18F7DA3E00AB403B /* IBeaconNotifierPodsLibrary-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IBeaconNotifierPodsLibrary-Prefix.pch"; sourceTree = "<group>"; };
+		097E698D18F7E9C100AB403B /* beacon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = beacon.csv; sourceTree = "<group>"; };
+		099AAD2A18F6931E00940E78 /* libIBeaconNotifierPodsLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIBeaconNotifierPodsLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		099AAD2D18F6931E00940E78 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		099AAD3A18F6931E00940E78 /* IBeaconNotifierPodsLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IBeaconNotifierPodsLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		099AAD3B18F6931E00940E78 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		099AAD3E18F6931E00940E78 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		099AAD4518F6931E00940E78 /* IBeaconNotifierPodsLibraryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IBeaconNotifierPodsLibraryTests-Info.plist"; sourceTree = "<group>"; };
+		099AAD4718F6931E00940E78 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		099AAD5518F6938800940E78 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		099AAD5B18F6938800940E78 /* beacon.sm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = beacon.sm; sourceTree = "<group>"; };
+		099AAD5C18F6938800940E78 /* statemap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = statemap.h; sourceTree = "<group>"; };
+		099AAD5D18F6938800940E78 /* statemap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = statemap.m; sourceTree = "<group>"; };
+		099AAD6018F6938800940E78 /* IBNBeaconRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBNBeaconRepository.h; sourceTree = "<group>"; };
+		099AAD6118F6938800940E78 /* IBNBeaconRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBNBeaconRepository.m; sourceTree = "<group>"; };
+		099AAD6318F6938800940E78 /* IBNBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBNBeacon.h; sourceTree = "<group>"; };
+		099AAD6418F6938800940E78 /* IBNBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBNBeacon.m; sourceTree = "<group>"; };
+		099AAD6518F6938800940E78 /* IBNBeaconModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBNBeaconModel.h; sourceTree = "<group>"; };
+		099AAD6618F6938800940E78 /* IBNBeaconModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBNBeaconModel.m; sourceTree = "<group>"; };
+		099AAD6718F6938800940E78 /* IBNBeaconRepositoryProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBNBeaconRepositoryProtocol.h; path = Model/BeaconService/IBNBeaconRepositoryProtocol.h; sourceTree = "<group>"; };
+		099AAD6818F6938800940E78 /* IBNBeaconServiceConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBNBeaconServiceConst.h; path = Model/BeaconService/IBNBeaconServiceConst.h; sourceTree = "<group>"; };
+		099AAD6918F6938800940E78 /* IBNBLEEventService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBNBLEEventService.h; sourceTree = "<group>"; };
+		099AAD6A18F6938800940E78 /* IBNBLEEventService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBNBLEEventService.m; sourceTree = "<group>"; };
+		099AAD6B18F6938800940E78 /* IBNNearestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBNNearestModel.h; sourceTree = "<group>"; };
+		099AAD6C18F6938800940E78 /* IBNNearestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBNNearestModel.m; sourceTree = "<group>"; };
+		099AAD6E18F6938800940E78 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		099AAD7718F6939E00940E78 /* iBeaconNotifier.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = iBeaconNotifier.podspec; path = ../../iBeaconNotifier.podspec; sourceTree = "<group>"; };
+		099AAD7818F6A21700940E78 /* IBNBeaconFSM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBNBeaconFSM.m; sourceTree = "<group>"; };
+		099AAD7918F6A21700940E78 /* IBNBeaconFSM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBNBeaconFSM.h; sourceTree = "<group>"; };
+		099AAD7C18F6A35100940E78 /* IBNCSVPerserUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBNCSVPerserUtility.h; sourceTree = "<group>"; };
+		099AAD7D18F6A35100940E78 /* IBNCSVPerserUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBNCSVPerserUtility.m; sourceTree = "<group>"; };
+		A0694419877C4D0E8934BF85 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB0B553258EC4E73BA6964A7 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		099AAD2718F6931E00940E78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				099AAD2E18F6931E00940E78 /* Foundation.framework in Frameworks */,
+				BEADB6952D3C4854A1FF4A73 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		099AAD3718F6931E00940E78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				099AAD3C18F6931E00940E78 /* XCTest.framework in Frameworks */,
+				099AAD4218F6931E00940E78 /* libIBeaconNotifierPodsLibrary.a in Frameworks */,
+				099AAD3F18F6931E00940E78 /* UIKit.framework in Frameworks */,
+				099AAD3D18F6931E00940E78 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		097E698A18F7DA3E00AB403B /* IBeaconNotifierPodsLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				097E698B18F7DA3E00AB403B /* IBeaconNotifierPodsLibrary-Prefix.pch */,
+			);
+			path = IBeaconNotifierPodsLibrary;
+			sourceTree = "<group>";
+		};
+		097E698C18F7E09E00AB403B /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				099AAD6818F6938800940E78 /* IBNBeaconServiceConst.h */,
+				099AAD6718F6938800940E78 /* IBNBeaconRepositoryProtocol.h */,
+			);
+			name = Public;
+			sourceTree = "<group>";
+		};
+		099AAD2118F6931E00940E78 = {
+			isa = PBXGroup;
+			children = (
+				099AAD7718F6939E00940E78 /* iBeaconNotifier.podspec */,
+				099AAD7618F6939100940E78 /* Assets */,
+				099AAD5318F6938800940E78 /* Classes */,
+				097E698A18F7DA3E00AB403B /* IBeaconNotifierPodsLibrary */,
+				099AAD4318F6931E00940E78 /* IBeaconNotifierPodsLibraryTests */,
+				099AAD2C18F6931E00940E78 /* Frameworks */,
+				099AAD2B18F6931E00940E78 /* Products */,
+				BB0B553258EC4E73BA6964A7 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		099AAD2B18F6931E00940E78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				099AAD2A18F6931E00940E78 /* libIBeaconNotifierPodsLibrary.a */,
+				099AAD3A18F6931E00940E78 /* IBeaconNotifierPodsLibraryTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		099AAD2C18F6931E00940E78 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				099AAD2D18F6931E00940E78 /* Foundation.framework */,
+				099AAD3B18F6931E00940E78 /* XCTest.framework */,
+				099AAD3E18F6931E00940E78 /* UIKit.framework */,
+				A0694419877C4D0E8934BF85 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		099AAD4318F6931E00940E78 /* IBeaconNotifierPodsLibraryTests */ = {
+			isa = PBXGroup;
+			children = (
+				097E698D18F7E9C100AB403B /* beacon.csv */,
+				099AAD4418F6931E00940E78 /* Supporting Files */,
+				097E698818F7D85B00AB403B /* IBNBeaconRepositoryTest.m */,
+			);
+			path = IBeaconNotifierPodsLibraryTests;
+			sourceTree = "<group>";
+		};
+		099AAD4418F6931E00940E78 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				099AAD4518F6931E00940E78 /* IBeaconNotifierPodsLibraryTests-Info.plist */,
+				099AAD4618F6931E00940E78 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		099AAD5318F6938800940E78 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				099AAD5418F6938800940E78 /* ios */,
+				099AAD6D18F6938800940E78 /* osx */,
+			);
+			name = Classes;
+			path = ../../Classes;
+			sourceTree = "<group>";
+		};
+		099AAD5418F6938800940E78 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				099AAD5518F6938800940E78 /* .gitkeep */,
+				099AAD5618F6938800940E78 /* Beacon */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		099AAD5618F6938800940E78 /* Beacon */ = {
+			isa = PBXGroup;
+			children = (
+				097E698C18F7E09E00AB403B /* Public */,
+				099AAD7B18F6A35100940E78 /* Util */,
+				099AAD5718F6938800940E78 /* FSM */,
+				099AAD5E18F6938800940E78 /* Model */,
+			);
+			path = Beacon;
+			sourceTree = "<group>";
+		};
+		099AAD5718F6938800940E78 /* FSM */ = {
+			isa = PBXGroup;
+			children = (
+				099AAD7918F6A21700940E78 /* IBNBeaconFSM.h */,
+				099AAD7818F6A21700940E78 /* IBNBeaconFSM.m */,
+				099AAD5A18F6938800940E78 /* sm */,
+				099AAD5C18F6938800940E78 /* statemap.h */,
+				099AAD5D18F6938800940E78 /* statemap.m */,
+			);
+			path = FSM;
+			sourceTree = "<group>";
+		};
+		099AAD5A18F6938800940E78 /* sm */ = {
+			isa = PBXGroup;
+			children = (
+				099AAD5B18F6938800940E78 /* beacon.sm */,
+			);
+			path = sm;
+			sourceTree = "<group>";
+		};
+		099AAD5E18F6938800940E78 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				099AAD5F18F6938800940E78 /* App */,
+				099AAD6218F6938800940E78 /* BeaconService */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		099AAD5F18F6938800940E78 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				099AAD6018F6938800940E78 /* IBNBeaconRepository.h */,
+				099AAD6118F6938800940E78 /* IBNBeaconRepository.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		099AAD6218F6938800940E78 /* BeaconService */ = {
+			isa = PBXGroup;
+			children = (
+				099AAD6318F6938800940E78 /* IBNBeacon.h */,
+				099AAD6418F6938800940E78 /* IBNBeacon.m */,
+				099AAD6518F6938800940E78 /* IBNBeaconModel.h */,
+				099AAD6618F6938800940E78 /* IBNBeaconModel.m */,
+				099AAD6918F6938800940E78 /* IBNBLEEventService.h */,
+				099AAD6A18F6938800940E78 /* IBNBLEEventService.m */,
+				099AAD6B18F6938800940E78 /* IBNNearestModel.h */,
+				099AAD6C18F6938800940E78 /* IBNNearestModel.m */,
+			);
+			path = BeaconService;
+			sourceTree = "<group>";
+		};
+		099AAD6D18F6938800940E78 /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				099AAD6E18F6938800940E78 /* .gitkeep */,
+			);
+			path = osx;
+			sourceTree = "<group>";
+		};
+		099AAD7618F6939100940E78 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Assets;
+			path = ../../Assets;
+			sourceTree = "<group>";
+		};
+		099AAD7B18F6A35100940E78 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				099AAD7C18F6A35100940E78 /* IBNCSVPerserUtility.h */,
+				099AAD7D18F6A35100940E78 /* IBNCSVPerserUtility.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		099AAD2918F6931E00940E78 /* IBeaconNotifierPodsLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 099AAD4D18F6931E00940E78 /* Build configuration list for PBXNativeTarget "IBeaconNotifierPodsLibrary" */;
+			buildPhases = (
+				9EAA48E87AC94222BCA281AC /* Check Pods Manifest.lock */,
+				099AAD2618F6931E00940E78 /* Sources */,
+				099AAD2718F6931E00940E78 /* Frameworks */,
+				099AAD2818F6931E00940E78 /* CopyFiles */,
+				6A530E15D7C14C05A6CB4DA2 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IBeaconNotifierPodsLibrary;
+			productName = IBeaconNotifierPodsLibrary;
+			productReference = 099AAD2A18F6931E00940E78 /* libIBeaconNotifierPodsLibrary.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		099AAD3918F6931E00940E78 /* IBeaconNotifierPodsLibraryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 099AAD5018F6931E00940E78 /* Build configuration list for PBXNativeTarget "IBeaconNotifierPodsLibraryTests" */;
+			buildPhases = (
+				099AAD3618F6931E00940E78 /* Sources */,
+				099AAD3718F6931E00940E78 /* Frameworks */,
+				099AAD3818F6931E00940E78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				099AAD4118F6931E00940E78 /* PBXTargetDependency */,
+			);
+			name = IBeaconNotifierPodsLibraryTests;
+			productName = IBeaconNotifierPodsLibraryTests;
+			productReference = 099AAD3A18F6931E00940E78 /* IBeaconNotifierPodsLibraryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		099AAD2218F6931E00940E78 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "森下 健";
+			};
+			buildConfigurationList = 099AAD2518F6931E00940E78 /* Build configuration list for PBXProject "IBeaconNotifierPodsLibrary" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 099AAD2118F6931E00940E78;
+			productRefGroup = 099AAD2B18F6931E00940E78 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				099AAD2918F6931E00940E78 /* IBeaconNotifierPodsLibrary */,
+				099AAD3918F6931E00940E78 /* IBeaconNotifierPodsLibraryTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		099AAD3818F6931E00940E78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				099AAD4818F6931E00940E78 /* InfoPlist.strings in Resources */,
+				097E698E18F7E9C100AB403B /* beacon.csv in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6A530E15D7C14C05A6CB4DA2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EAA48E87AC94222BCA281AC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		099AAD2618F6931E00940E78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				099AAD7218F6938800940E78 /* IBNBeacon.m in Sources */,
+				099AAD7018F6938800940E78 /* statemap.m in Sources */,
+				099AAD7F18F6A35700940E78 /* IBNCSVPerserUtility.m in Sources */,
+				099AAD7118F6938800940E78 /* IBNBeaconRepository.m in Sources */,
+				099AAD7518F6938800940E78 /* IBNNearestModel.m in Sources */,
+				099AAD7418F6938800940E78 /* IBNBLEEventService.m in Sources */,
+				099AAD7318F6938800940E78 /* IBNBeaconModel.m in Sources */,
+				099AAD7A18F6A21700940E78 /* IBNBeaconFSM.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		099AAD3618F6931E00940E78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				097E698918F7D85B00AB403B /* IBNBeaconRepositoryTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		099AAD4118F6931E00940E78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 099AAD2918F6931E00940E78 /* IBeaconNotifierPodsLibrary */;
+			targetProxy = 099AAD4018F6931E00940E78 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		099AAD4618F6931E00940E78 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				099AAD4718F6931E00940E78 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		099AAD4B18F6931E00940E78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		099AAD4C18F6931E00940E78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		099AAD4E18F6931E00940E78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB0B553258EC4E73BA6964A7 /* Pods.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/IBeaconNotifierPodsLibrary.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IBeaconNotifierPodsLibrary/IBeaconNotifierPodsLibrary-Prefix.pch";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		099AAD4F18F6931E00940E78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB0B553258EC4E73BA6964A7 /* Pods.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/IBeaconNotifierPodsLibrary.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IBeaconNotifierPodsLibrary/IBeaconNotifierPodsLibrary-Prefix.pch";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		099AAD5118F6931E00940E78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IBeaconNotifierPodsLibrary/IBeaconNotifierPodsLibrary-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "IBeaconNotifierPodsLibraryTests/IBeaconNotifierPodsLibraryTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		099AAD5218F6931E00940E78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IBeaconNotifierPodsLibrary/IBeaconNotifierPodsLibrary-Prefix.pch";
+				INFOPLIST_FILE = "IBeaconNotifierPodsLibraryTests/IBeaconNotifierPodsLibraryTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		099AAD2518F6931E00940E78 /* Build configuration list for PBXProject "IBeaconNotifierPodsLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				099AAD4B18F6931E00940E78 /* Debug */,
+				099AAD4C18F6931E00940E78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		099AAD4D18F6931E00940E78 /* Build configuration list for PBXNativeTarget "IBeaconNotifierPodsLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				099AAD4E18F6931E00940E78 /* Debug */,
+				099AAD4F18F6931E00940E78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		099AAD5018F6931E00940E78 /* Build configuration list for PBXNativeTarget "IBeaconNotifierPodsLibraryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				099AAD5118F6931E00940E78 /* Debug */,
+				099AAD5218F6931E00940E78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 099AAD2218F6931E00940E78 /* Project object */;
+}

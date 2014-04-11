@@ -7,7 +7,7 @@
 Pod::Spec.new do |s|
   s.name             = "iBeaconNotifier"
   s.version          = "0.1.0"
-  s.summary          = "A short description of iBeaconNotifier."
+  s.summary          = "iBeacon Management Library"
   s.description      = <<-DESC
                        An optional longer description of iBeaconNotifier
 
@@ -33,5 +33,5 @@ Pod::Spec.new do |s|
   s.osx.exclude_files = 'Classes/ios'
   # s.public_header_files = 'Classes/**/*.h'
   # s.frameworks = 'SomeFramework', 'AnotherFramework'
-  # s.dependency 'JSONKit', '~> 1.4'
+  s.dependency 'CocoaLumberjack', '~> 1.8'
 end

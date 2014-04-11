@@ -1,0 +1,42 @@
+%package  jp.co.yumemi.lab
+%class        IBNBeaconModel
+%include      IBNBeaconModel.h
+%fsmclass  IBNBeaconFSM
+
+%start IBNBeaconMap::Outside
+
+%map IBNBeaconMap
+%%
+Outside
+Entry { enterOutside(); }
+{
+    in      Inside              {}
+}
+
+Inside
+Entry { enterInside(); }
+{
+    far     Far                 {}
+    near    Near                {}
+    out     Outside             {}
+}
+
+Far
+Entry { enterFar(); }
+{
+    out     Outside             {}
+    near    Near                {}
+}
+
+Near
+Entry { enterNear(); }
+{
+    out     Outside             {}
+    far     Far                 {}
+}
+
+Default 
+{
+    Default nil                 {}
+}
+%%
