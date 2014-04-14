@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		095D203218FB89E60067BFEC /* IBNNearestModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 095D203118FB89E60067BFEC /* IBNNearestModelTest.m */; };
+		095D203518FB8C720067BFEC /* IBNNotificationSpy.m in Sources */ = {isa = PBXBuildFile; fileRef = 095D203418FB8C720067BFEC /* IBNNotificationSpy.m */; };
+		095D203718FBABAB0067BFEC /* IBNBeaconModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 095D203618FBABAB0067BFEC /* IBNBeaconModelTest.m */; };
+		095D203918FBB2540067BFEC /* IBNBLEEventServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 095D203818FBB2540067BFEC /* IBNBLEEventServiceTest.m */; };
 		097E698918F7D85B00AB403B /* IBNBeaconRepositoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 097E698818F7D85B00AB403B /* IBNBeaconRepositoryTest.m */; };
 		097E698E18F7E9C100AB403B /* beacon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 097E698D18F7E9C100AB403B /* beacon.csv */; };
 		099AAD2E18F6931E00940E78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099AAD2D18F6931E00940E78 /* Foundation.framework */; };
@@ -49,6 +53,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		095D203118FB89E60067BFEC /* IBNNearestModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBNNearestModelTest.m; sourceTree = "<group>"; };
+		095D203318FB8C720067BFEC /* IBNNotificationSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBNNotificationSpy.h; sourceTree = "<group>"; };
+		095D203418FB8C720067BFEC /* IBNNotificationSpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBNNotificationSpy.m; sourceTree = "<group>"; };
+		095D203618FBABAB0067BFEC /* IBNBeaconModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBNBeaconModelTest.m; sourceTree = "<group>"; };
+		095D203818FBB2540067BFEC /* IBNBLEEventServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBNBLEEventServiceTest.m; sourceTree = "<group>"; };
 		097E698818F7D85B00AB403B /* IBNBeaconRepositoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBNBeaconRepositoryTest.m; sourceTree = "<group>"; };
 		097E698B18F7DA3E00AB403B /* IBeaconNotifierPodsLibrary-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IBeaconNotifierPodsLibrary-Prefix.pch"; sourceTree = "<group>"; };
 		097E698D18F7E9C100AB403B /* beacon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = beacon.csv; sourceTree = "<group>"; };
@@ -166,6 +175,11 @@
 				097E698D18F7E9C100AB403B /* beacon.csv */,
 				099AAD4418F6931E00940E78 /* Supporting Files */,
 				097E698818F7D85B00AB403B /* IBNBeaconRepositoryTest.m */,
+				095D203118FB89E60067BFEC /* IBNNearestModelTest.m */,
+				095D203318FB8C720067BFEC /* IBNNotificationSpy.h */,
+				095D203418FB8C720067BFEC /* IBNNotificationSpy.m */,
+				095D203618FBABAB0067BFEC /* IBNBeaconModelTest.m */,
+				095D203818FBB2540067BFEC /* IBNBLEEventServiceTest.m */,
 			);
 			path = IBeaconNotifierPodsLibraryTests;
 			sourceTree = "<group>";
@@ -232,24 +246,16 @@
 		099AAD5E18F6938800940E78 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				099AAD5F18F6938800940E78 /* App */,
 				099AAD6218F6938800940E78 /* BeaconService */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		099AAD5F18F6938800940E78 /* App */ = {
+		099AAD6218F6938800940E78 /* BeaconService */ = {
 			isa = PBXGroup;
 			children = (
 				099AAD6018F6938800940E78 /* IBNBeaconRepository.h */,
 				099AAD6118F6938800940E78 /* IBNBeaconRepository.m */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
-		099AAD6218F6938800940E78 /* BeaconService */ = {
-			isa = PBXGroup;
-			children = (
 				099AAD6318F6938800940E78 /* IBNBeacon.h */,
 				099AAD6418F6938800940E78 /* IBNBeacon.m */,
 				099AAD6518F6938800940E78 /* IBNBeaconModel.h */,
@@ -419,7 +425,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				095D203218FB89E60067BFEC /* IBNNearestModelTest.m in Sources */,
+				095D203918FBB2540067BFEC /* IBNBLEEventServiceTest.m in Sources */,
+				095D203718FBABAB0067BFEC /* IBNBeaconModelTest.m in Sources */,
 				097E698918F7D85B00AB403B /* IBNBeaconRepositoryTest.m in Sources */,
+				095D203518FB8C720067BFEC /* IBNNotificationSpy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
