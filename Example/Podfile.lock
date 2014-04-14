@@ -4,7 +4,7 @@ PODS:
   - CocoaLumberjack/Core (1.8.1)
   - CocoaLumberjack/Extensions (1.8.1):
     - CocoaLumberjack/Core
-  - iBeaconNotifier (0.1.0):
+  - iBeaconNotifier (0.1.1):
     - CocoaLumberjack (~> 1.8)
 
 DEPENDENCIES:
@@ -16,6 +16,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 020378ec400d658923bf5887178394f65f052c90
-  iBeaconNotifier: 31eed12b5acf8482b5c99b68f52b4df1bd547d35
+  iBeaconNotifier: 078f96b45c419c354d211e3ad6a6444533828705
 
 COCOAPODS: 0.31.1

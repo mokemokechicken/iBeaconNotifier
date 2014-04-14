@@ -6,13 +6,10 @@
 #
 Pod::Spec.new do |s|
   s.name             = "iBeaconNotifier"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "iBeacon Management Library"
   s.description      = <<-DESC
-                       An optional longer description of iBeaconNotifier
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+                        Specify beacon info file, then Beacon Event posted as NSNotification
                        DESC
   s.homepage         = "http://EXAMPLE/NAME"
   s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
@@ -31,7 +28,7 @@ Pod::Spec.new do |s|
 
   s.ios.exclude_files = 'Classes/osx'
   s.osx.exclude_files = 'Classes/ios'
-  # s.public_header_files = 'Classes/**/*.h'
+  s.public_header_files = 'Classes/**/Public/*.h'
   # s.frameworks = 'SomeFramework', 'AnotherFramework'
-  s.dependency 'CocoaLumberjack', '~> 1.8'
+  # s.dependency 'CocoaLumberjack', '~> 1.8'
 end
