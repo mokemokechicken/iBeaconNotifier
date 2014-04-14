@@ -40,6 +40,7 @@
     
     NSString *path = [bundle pathForResource:filename ofType:nil];
     if (!path) {
+        NSLog(@"%@ is not found in bundle:%@", filename, bundle);
         return @"";
     }
     

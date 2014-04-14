@@ -7,6 +7,12 @@
 //
 
 #import "GRTAppDelegate.h"
+#import "IBNBeaconService.h"
+
+@interface GRTAppDelegate ()
+@property IBNBeaconService *beaconService;
+@end
+
 
 @implementation GRTAppDelegate
 
@@ -16,6 +22,7 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    self.beaconService = [IBNBeaconService startWithFielname:@"beacon.csv" bundle:nil];
     return YES;
 }
 
