@@ -19,7 +19,7 @@ it simply add the following line to your Podfile:
 
 ## Example
 
-Please see, `Example/IBeaconNotifierExample/GRTExampleViewController.m`
+Please see, `Example/IBeaconNotifierExample/{GRTAppDelegate.m,GRTExampleViewController.m}`
 
 ## Author
 
