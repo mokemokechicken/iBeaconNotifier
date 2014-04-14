@@ -13,6 +13,7 @@
 @interface IBNBeaconModel ()
 @property NSString *beaconId;
 @property IBNBeaconFSM *fsm;
+@property BOOL isListening;
 @end
 
 @implementation IBNBeaconModel
@@ -23,33 +24,37 @@
 - (id)initWithBeaconId:(NSString *)beaconId state:(IBNBeaconModelState *)state{
     self = [super init];
     if (self) {
+        self.isListening = false;
         self.beaconId = beaconId;
         if (state) {
             self.fsm = [[IBNBeaconFSM alloc] initWithOwner:self state:state];
         } else {
             self.fsm = [[IBNBeaconFSM alloc] initWithOwner:self];
         }
-        [self startListenEvent];
     }
     return self;
 }
 
 - (void)dealloc {
-    [self cleanUp];
+    [self stopListenEvent];
 }
 
-- (void)cleanUp {
+- (void)stopListenEvent {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    self.isListening = false;
 }
 
 
 #pragma mark -- Listen
 - (void)startListenEvent {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eventIn:) name:IBN_IBEACON_EVENT_IN object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eventOut:) name:IBN_IBEACON_EVENT_OUT object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eventNear:) name:IBN_IBEACON_EVENT_IMMEDIATE object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eventNear:) name:IBN_IBEACON_EVENT_NEAR object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eventFar:) name:IBN_IBEACON_EVENT_FAR object:nil];
+    if (!self.isListening) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eventIn:) name:IBN_IBEACON_EVENT_IN object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eventOut:) name:IBN_IBEACON_EVENT_OUT object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eventNear:) name:IBN_IBEACON_EVENT_IMMEDIATE object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eventNear:) name:IBN_IBEACON_EVENT_NEAR object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eventFar:) name:IBN_IBEACON_EVENT_FAR object:nil];
+        self.isListening = true;
+    }
 }
 
 - (void)eventIn:(NSNotification *)note   { if ([self isMyBeacon:note]) [_fsm in]; }

@@ -30,11 +30,12 @@
     // Put setup code here. This method is called before the invocation of each test method in the class.
     self.spy = [[IBNNotificationSpy alloc] init];
     self.obj = [[IBNBeaconModel alloc] initWithBeaconId:BID];
+    [self.obj startListenEvent];
 }
 
 - (void)tearDown
 {
-    [self.obj cleanUp];
+    [self.obj stopListenEvent];
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }

@@ -13,6 +13,8 @@
 #import "IBNBeaconServiceConst.h"
 
 #import "IBNNotificationSpy.h"
+#import "IBNBeacon.h"
+#import "IBNBeaconRepository.h"
 
 @interface IBNNearestModelTest : XCTestCase
 @property IBNNearestModel *obj;
@@ -26,14 +28,25 @@
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
     self.spy = [[IBNNotificationSpy alloc] init];
-    self.obj = [[IBNNearestModel alloc] init];
+    self.obj = [IBNNearestModel configWithBeaconRepository:[self repositoryConfigWithArray]];
+    [self.obj startListenEvent];
 }
 
 - (void)tearDown
 {
-    [self.obj cleanUp];
+    [self.obj stopListenEvent];
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
+}
+
+- (IBNBeaconRepository *)repositoryConfigWithArray {
+    NSString *uuid = @"4337B720-EA0F-4D15-A2D2-16A41A3691EC";
+    NSArray *beaconArray = @[
+                             [[IBNBeacon alloc] initWithBeaconId:@"b1" uuid:uuid major:@(1) minor:@(2)],
+                             [[IBNBeacon alloc] initWithBeaconId:@"b2" uuid:uuid major:@(1) minor:@(1)],
+                             [[IBNBeacon alloc] initWithBeaconId:@"b3" uuid:uuid major:@(1) minor:@(0)],
+                             ];
+    return [IBNBeaconRepository configurationWithBeaconArray:beaconArray];
 }
 
 - (void)notifyEvent:(NSString *)event beaconId:(NSString *)beaconId {
@@ -56,6 +69,11 @@
     XCTAssertEqual(1, ([self.spy countOf:IBN_CHANGE_NEAREST_BEACON, @"b3", nil]), @"first beacon should not be nearest");
 }
 
+
+- (void)testUnknownBeaconId {
+    [self notifyEvent:IBN_IBEACON_EVENT_IN beaconId:@"x1"];
+    XCTAssertEqual(0, ([self.spy countOf:IBN_CHANGE_NEAREST_BEACON, @"x1", nil]), @"unkown beacon id must be ignored");
+}
 
 @end
 

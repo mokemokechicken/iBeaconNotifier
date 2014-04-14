@@ -9,42 +9,72 @@
 #import "IBNBLEEventService.h"
 #import "IBNBeaconServiceConst.h"
 #import "IBNNearestModel.h"
+#import "IBNBeaconRepositoryProtocol.h"
+
 
 @interface IBNNearestModel ()
 @property NSMutableSet *beaconSet;
 @property NSString *nearestBeaconId;
+@property BOOL isListening;
+@property id <IBNBeaconRepositoryProtocol> beaconRepository;
+@property NSMutableSet *beaconIdSet;
 @end
 
 
 @implementation IBNNearestModel
 
-- (id)init {
++ (IBNNearestModel *)configWithBeaconRepository:(id<IBNBeaconRepositoryProtocol>)beaconRepository {
+    IBNNearestModel *model = [[IBNNearestModel alloc] initWithBeaconRepository: beaconRepository];
+    return model;
+}
+
+- (id)initWithBeaconRepository: (id<IBNBeaconRepositoryProtocol>)beaconRepository {
     self = [super init];
     if (self) {
+        self.isListening = false;
         self.beaconSet = [NSMutableSet set];
         self.nearestBeaconId = nil;
-        [self startListenEvent];
+        self.beaconRepository = beaconRepository;
+        self.beaconIdSet = [NSMutableSet set];
+        [self setupBeaconSet];
     }
     return self;
 }
 
 - (void)dealloc {
-    [self cleanUp];
+    [self stopListenEvent];
 }
 
-- (void)cleanUp {
+- (void)setupBeaconSet {
+    for (id <IBNBeaconProtocol> beacon in [self.beaconRepository beacons]) {
+        [self.beaconIdSet addObject:[beacon beaconId]];
+    }
+}
+
+- (void)stopListenEvent {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    self.isListening = false;
 }
 
 #pragma mark -- Listen
 - (void)startListenEvent {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eventIn:) name:IBN_IBEACON_EVENT_IN object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eventOut:) name:IBN_IBEACON_EVENT_OUT object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eventNearest:) name:IBN_IBEACON_EVENT_NEAREST object:nil];
+    if (!self.isListening) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eventIn:) name:IBN_IBEACON_EVENT_IN object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eventOut:) name:IBN_IBEACON_EVENT_OUT object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eventNearest:) name:IBN_IBEACON_EVENT_NEAREST object:nil];
+        self.isListening = true;
+    }
+}
+
+- (BOOL)isTargetBeacon:(NSString *)beaconId {
+    return [self.beaconIdSet containsObject:beaconId];
 }
 
 - (void)eventIn:(NSNotification *)note   {
     NSString *beaconId = note.userInfo[IBN_BEACON_ID];
+    if (![self isTargetBeacon:beaconId]) {
+        return;
+    }
     if (beaconId) {
         [_beaconSet addObject:beaconId];
     }
@@ -55,6 +85,9 @@
 
 - (void)eventOut:(NSNotification *)note  {
     NSString *beaconId = note.userInfo[IBN_BEACON_ID];
+    if (![self isTargetBeacon:beaconId]) {
+        return;
+    }
     if (beaconId) {
         [_beaconSet removeObject:beaconId];
     }
@@ -68,6 +101,9 @@
 
 - (void)eventNearest:(NSNotification *)note {
     NSString *beaconId = note.userInfo[IBN_BEACON_ID];
+    if (![self isTargetBeacon:beaconId]) {
+        return;
+    }
     [self decideNearestByBeaconId:beaconId];
 }
 

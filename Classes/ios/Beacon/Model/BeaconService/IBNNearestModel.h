@@ -10,6 +10,12 @@
 
 #import <Foundation/Foundation.h>
 
+
+@protocol IBNBeaconRepositoryProtocol;
+
+
 @interface IBNNearestModel : NSObject
-- (void)cleanUp;
++ (IBNNearestModel *)configWithBeaconRepository: (id <IBNBeaconRepositoryProtocol>)beaconRepository;
+- (void)stopListenEvent;
+- (void)startListenEvent;
 @end

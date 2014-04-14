@@ -23,7 +23,9 @@
 
 - (id)initWithBeaconId:(NSString *)beaconId;
 - (id)initWithBeaconId:(NSString *)beaconId state:(IBNBeaconModelState *)state;
-- (void)cleanUp;
+- (void)startListenEvent;
+- (void)stopListenEvent;
+
 - (void)enterOutside;
 - (void)enterInside;
 - (void)enterFar;
