@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		095D204018FBCCB00067BFEC /* beacon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 095D203F18FBCCB00067BFEC /* beacon.csv */; };
+		095D204318FBCCF10067BFEC /* GRTExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 095D204218FBCCF10067BFEC /* GRTExampleViewController.m */; };
+		095D204518FBCFAB0067BFEC /* GRTExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 095D204418FBCFAB0067BFEC /* GRTExampleViewController.xib */; };
 		098EDB3118F683F500555BA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098EDB3018F683F500555BA1 /* Foundation.framework */; };
 		098EDB3318F683F500555BA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098EDB3218F683F500555BA1 /* CoreGraphics.framework */; };
 		098EDB3518F683F500555BA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098EDB3418F683F500555BA1 /* UIKit.framework */; };
@@ -34,6 +37,10 @@
 
 /* Begin PBXFileReference section */
 		095D203E18FBC64C0067BFEC /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		095D203F18FBCCB00067BFEC /* beacon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = beacon.csv; sourceTree = "<group>"; };
+		095D204118FBCCF10067BFEC /* GRTExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRTExampleViewController.h; sourceTree = "<group>"; };
+		095D204218FBCCF10067BFEC /* GRTExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRTExampleViewController.m; sourceTree = "<group>"; };
+		095D204418FBCFAB0067BFEC /* GRTExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GRTExampleViewController.xib; sourceTree = "<group>"; };
 		098EDB2D18F683F500555BA1 /* IBeaconNotifierExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBeaconNotifierExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		098EDB3018F683F500555BA1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		098EDB3218F683F500555BA1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,6 +89,7 @@
 		098EDB2418F683F500555BA1 = {
 			isa = PBXGroup;
 			children = (
+				095D203F18FBCCB00067BFEC /* beacon.csv */,
 				095D203E18FBC64C0067BFEC /* Podfile */,
 				098EDB3618F683F500555BA1 /* IBeaconNotifierExample */,
 				098EDB4F18F683F500555BA1 /* IBeaconNotifierExampleTests */,
@@ -117,6 +125,9 @@
 			children = (
 				098EDB3F18F683F500555BA1 /* GRTAppDelegate.h */,
 				098EDB4018F683F500555BA1 /* GRTAppDelegate.m */,
+				095D204118FBCCF10067BFEC /* GRTExampleViewController.h */,
+				095D204218FBCCF10067BFEC /* GRTExampleViewController.m */,
+				095D204418FBCFAB0067BFEC /* GRTExampleViewController.xib */,
 				098EDB4218F683F500555BA1 /* Images.xcassets */,
 				098EDB3718F683F500555BA1 /* Supporting Files */,
 			);
@@ -230,6 +241,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				095D204018FBCCB00067BFEC /* beacon.csv in Resources */,
+				095D204518FBCFAB0067BFEC /* GRTExampleViewController.xib in Resources */,
 				098EDB3B18F683F500555BA1 /* InfoPlist.strings in Resources */,
 				098EDB4318F683F500555BA1 /* Images.xcassets in Resources */,
 			);
@@ -285,6 +298,7 @@
 			files = (
 				098EDB4118F683F500555BA1 /* GRTAppDelegate.m in Sources */,
 				098EDB3D18F683F500555BA1 /* main.m in Sources */,
+				095D204318FBCCF10067BFEC /* GRTExampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

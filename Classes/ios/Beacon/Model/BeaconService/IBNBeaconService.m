@@ -22,19 +22,19 @@
 @end
 
 @implementation IBNBeaconService
-+ (IBNBeaconService *)startWithBeaconRepository:(id<IBNBeaconRepositoryProtocol>)beaconRepository {
++ (IBNBeaconService *)createWithBeaconRepository:(id<IBNBeaconRepositoryProtocol>)beaconRepository {
     IBNBeaconService *obj = [[IBNBeaconService alloc] init];
     [obj configWithBeaconRepository:beaconRepository];
     return obj;
 }
 
-+ (IBNBeaconService *)startWithFielname:(NSString *)filename bundle:(NSBundle *)bundle {
++ (IBNBeaconService *)createWithFielname:(NSString *)filename bundle:(NSBundle *)bundle {
     IBNBeaconRepository *repo = [IBNBeaconRepository configurationWithFilename:filename bundle:bundle];
-    return [self startWithBeaconRepository:repo];
+    return [self createWithBeaconRepository:repo];
 }
 
 - (void)configWithBeaconRepository:(id<IBNBeaconRepositoryProtocol>)beaconRepository {
-    self.nearestModel = [[IBNNearestModel alloc] init];
+    self.nearestModel = [IBNNearestModel configWithBeaconRepository:beaconRepository];
     self.beaconModelArray = [NSMutableArray array];
     for (IBNBeacon *beacon in [beaconRepository beacons]) {
         IBNBeaconModel *beaconModel = [[IBNBeaconModel alloc] initWithBeaconId:beacon.beaconId];
