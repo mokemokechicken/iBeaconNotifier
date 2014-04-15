@@ -25,7 +25,7 @@ BeaconC	4337B720-EA0F-4D15-A2D2-16A41A3691EC	1	0
 + (IBNBeaconService *)createWithBeaconRepository:(id <IBNBeaconRepositoryProtocol>)beaconRepository;
 
 // load TSV format file from bundle
-+ (IBNBeaconService *)createWithFielname:(NSString *)filename bundle:(NSBundle *)bundle;
++ (IBNBeaconService *)createWithFilename:(NSString *)filename bundle:(NSBundle *)bundle;
 
 - (void)start;
 - (void)stop;

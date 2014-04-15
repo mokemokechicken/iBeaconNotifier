@@ -83,7 +83,7 @@ Beacon監視を開始するには以下のようにします。
 
 ```
     // start beacon service
-    self.beaconService = [IBNBeaconService createWithFielname:@"beacon.tsv" bundle:nil];
+    self.beaconService = [IBNBeaconService createWithFilename:@"beacon.tsv" bundle:nil];
     [self.beaconService start];
 ```
 

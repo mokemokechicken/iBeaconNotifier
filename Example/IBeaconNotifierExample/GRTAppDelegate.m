@@ -25,7 +25,7 @@
     self.window.rootViewController = [[GRTExampleViewController alloc] initWithNibName:@"GRTExampleViewController" bundle:nil];
 
     // start beacon service
-    self.beaconService = [IBNBeaconService createWithFielname:@"beacon.csv" bundle:nil];
+    self.beaconService = [IBNBeaconService createWithFilename:@"beacon.csv" bundle:nil];
     [self.beaconService start];
     
     return YES;

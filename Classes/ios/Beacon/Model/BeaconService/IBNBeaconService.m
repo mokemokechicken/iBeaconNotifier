@@ -28,7 +28,7 @@
     return obj;
 }
 
-+ (IBNBeaconService *)createWithFielname:(NSString *)filename bundle:(NSBundle *)bundle {
++ (IBNBeaconService *)createWithFilename:(NSString *)filename bundle:(NSBundle *)bundle {
     IBNBeaconRepository *repo = [IBNBeaconRepository configurationWithFilename:filename bundle:bundle];
     return [self createWithBeaconRepository:repo];
 }

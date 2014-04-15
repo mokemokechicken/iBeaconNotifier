@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "iBeaconNotifier"
-  s.version          = "0.1.4"
+  s.version          = "0.1.5"
   s.summary          = "iBeacon Management Library"
   s.description      = <<-DESC
                         Specify beacon info file, then Beacon Event posted as NSNotification
