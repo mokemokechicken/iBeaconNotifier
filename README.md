@@ -45,6 +45,7 @@ Please see, `Example/IBeaconNotifierExample/{GRTAppDelegate.m,GRTExampleViewCont
 iBeaconNotifier is available through [CocoaPods](http://cocoapods.org), to install
 it simply add the following line to your Podfile:
 
+    platform :ios, '5.0'
     pod "iBeaconNotifier", :git => 'https://github.com/mokemokechicken/iBeaconNotifier.git'
 
 ## How To Use
