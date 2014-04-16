@@ -46,7 +46,7 @@ iBeaconNotifier is available through [CocoaPods](http://cocoapods.org), to insta
 it simply add the following line to your Podfile:
 
     platform :ios, '5.0'
-    pod "iBeaconNotifier", :git => 'https://github.com/mokemokechicken/iBeaconNotifier.git'
+    pod "iBeaconNotifier"
 
 ## How To Use
 
@@ -66,7 +66,10 @@ Step1: 利用するBeaconの情報の設定
 例：
 
 ```text:beacon.tsv
-id	uuid	major	minorBeaconA	00000000-04B1-1001-B000-001C4D153904	1	4BeaconB	00000000-04B1-1001-B000-001C4D153904	0	2BeaconC	00000000-04B1-1001-B000-001C4D153904	1	3
+id	uuid	major	minor
+BeaconA	00000000-04B1-1001-B000-001C4D153904	1	4
+BeaconB	00000000-04B1-1001-B000-001C4D153904	0	2
+BeaconC	00000000-04B1-1001-B000-001C4D153904	1	3
 ```
 
 Step2: Beacon監視サービスの起動
