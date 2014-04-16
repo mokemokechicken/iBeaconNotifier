@@ -1,5 +1,5 @@
 PODS:
-  - iBeaconNotifier (0.1.2)
+  - iBeaconNotifier (0.1.6)
 
 DEPENDENCIES:
   - iBeaconNotifier (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  iBeaconNotifier: cfccff52370372319858ca631c4d1737a19dd243
+  iBeaconNotifier: c0a4d63c4afdbc1ec9a0f99af2410278e0ff602d
 
 COCOAPODS: 0.31.1
